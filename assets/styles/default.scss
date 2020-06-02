@@ -121,6 +121,7 @@ footer{
     display: flex;
     overflow: hidden;
     flex-direction: row-reverse;
+    justify-content: space-between;
     background-color: white;
 
     .blogImage {
