@@ -17,6 +17,5 @@ switch ($request) {
             break;
         }
 }
-include "components/notification.php"
 ?>
 
