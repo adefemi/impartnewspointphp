@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: white;
+}
+
+.textCapitalized {
+  text-transform: capitalize;
+}
+
+.navbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.navbar .brand a {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.navbar .brand a span {
+  margin-left: 20px;
+}
+.navbar .brand a img {
+  width: 50px;
+}
+.navbar .navRight {
+  display: flex;
+  align-items: center;
+}
+.navbar .navRight .navLinks {
+  margin: 0 20px;
+}
+.navbar .navRight .navLinks:last-child {
+  margin-right: 0;
+}
+.navbar .navRight .navLinks a {
+  color: black;
+  font-size: 13px;
+  font-weight: 300;
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+  .navbar .navRight .navLinks {
+    margin-left: 0;
+  }
+  .navbar .navRight .navLinks a {
+    font-size: 12px;
+  }
+}
+
+.children-con {
+  min-height: 90vh;
+}
+
+footer {
+  height: 100px;
+  background-color: #e9f1f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.blogExtras-main h4 {
+  margin: 0;
+  font-size: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 20px;
+}
+
+.blogListContainer {
+  max-width: 1000px;
+  padding: 30px 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-gap: 4em;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+  .blogListContainer {
+    grid-template-columns: 1fr;
+  }
+}
+.blogListContainer .blogCard,
+.blogListContainer .blogCardExtra {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 50px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: row-reverse;
+  background-color: white;
+}
+.blogListContainer .blogCard .blogImage,
+.blogListContainer .blogCardExtra .blogImage {
+  flex: 1;
+  width: 25%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: whitesmoke;
+  min-width: 25%;
+  max-width: 25%;
+  margin-left: 20px;
+}
+@media screen and (max-width: 600px) {
+  .blogListContainer .blogCard,
+.blogListContainer .blogCardExtra {
+    height: 100px;
+  }
+}
+.blogListContainer .blogCard h4,
+.blogListContainer .blogCardExtra h4 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.blogListContainer .blogCard .blogContent,
+.blogListContainer .blogCardExtra .blogContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blogListContainer .blogCard .blogContent a,
+.blogListContainer .blogCardExtra .blogContent a {
+  text-decoration: none;
+}
+.blogListContainer .blogCard .blogContent .blogTitle,
+.blogListContainer .blogCardExtra .blogContent .blogTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 5px;
+}
+.blogListContainer .blogCard .blogContent p,
+.blogListContainer .blogCardExtra .blogContent p {
+  margin: 0;
+  line-height: 25px;
+  color: #4d4d4d;
+  width: 100%;
+  font-family: "Tajawal", sans-serif;
+  font-size: 15px;
+}
+.blogListContainer .blogCard .blogContent p img,
+.blogListContainer .blogCardExtra .blogContent p img {
+  width: 100%;
+}
+.blogListContainer .blogCard .blogContent .footer,
+.blogListContainer .blogCardExtra .blogContent .footer {
+  font-size: 12px;
+  color: #4d4d4d;
+  font-weight: 500;
+}
+@media screen and (max-width: 600px) {
+  .blogListContainer .blogCard .blogContent .blogTitle,
+.blogListContainer .blogCardExtra .blogContent .blogTitle {
+    font-size: 17px;
+  }
+  .blogListContainer .blogCard .blogContent p,
+.blogListContainer .blogCardExtra .blogContent p {
+    font-size: 13px;
+  }
+  .blogListContainer .blogCard .blogContent .footer,
+.blogListContainer .blogCardExtra .blogContent .footer {
+    font-size: 11px;
+  }
+}
+.blogListContainer .blogCardExtra {
+  height: unset;
+  flex-direction: row;
+}
+.blogListContainer .blogCardExtra .blogContent .blogTitle {
+  font-size: 15px;
+}
+.blogListContainer .blogCardExtra .blogContent .footer {
+  margin-top: 10px;
+}
+
+.blog-container {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.pagination {
+  max-width: 1200px;
+  margin: 30px auto;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.pagination ul {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  border-radius: 2px;
+  border: 1px solid #f2f2f2;
+}
+.pagination ul li {
+  list-style: none;
+}
+.pagination ul li a {
+  padding: 10px 25px;
+  border-right: 1px solid #f2f2f2;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: white;
+}
+@media screen and (max-width: 600px) {
+  .pagination ul li a {
+    padding: 7px 20px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .pagination ul li a {
+    padding: 5px 15px;
+    font-size: 13px;
+  }
+}
+.pagination ul li:last-child a {
+  border-right: none;
+}
+.pagination ul li:hover a {
+  background-color: #f2f2f2;
+}
+.pagination ul li.disabled a {
+  cursor: not-allowed;
+  color: gray;
+}
+.pagination ul li.selected a {
+  color: white;
+  background-color: #173f5f;
+}
+
+.mobile {
+  display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: block !important;
+  }
+}
+.skeleton {
+  background-color: #f2f2f2;
+}
+
+.blogListContainer-singlePage {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 400;
+  line-height: 25px;
+}
+.blogListContainer-singlePage .blogExtras {
+  margin-left: 2em;
+  margin-top: 20px;
+}
+.blogListContainer-singlePage .blogExtras .blogContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blogListContainer-singlePage .blogExtras .blogContent a {
+  text-decoration: none;
+}
+.blogListContainer-singlePage .blogExtras .blogContent .blogTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 5px;
+}
+.blogListContainer-singlePage .blogExtras .blogContent p {
+  margin: 0;
+  line-height: 25px;
+  color: #4d4d4d;
+  width: 100%;
+  font-family: "Tajawal", sans-serif;
+  font-size: 15px;
+}
+.blogListContainer-singlePage .blogExtras .blogContent p img {
+  width: 100%;
+}
+.blogListContainer-singlePage .blogExtras .blogContent .footer {
+  font-size: 12px;
+  color: #4d4d4d;
+  font-weight: 500;
+}
+@media screen and (max-width: 600px) {
+  .blogListContainer-singlePage .blogExtras .blogContent .blogTitle {
+    font-size: 17px;
+  }
+  .blogListContainer-singlePage .blogExtras .blogContent p {
+    font-size: 13px;
+  }
+  .blogListContainer-singlePage .blogExtras .blogContent .footer {
+    font-size: 11px;
+  }
+}
+.blogListContainer-singlePage img {
+  max-width: 100% !important;
+  max-height: 400px;
+}
+.blogListContainer-singlePage pre {
+  overflow: auto;
+}
+.blogListContainer-singlePage > * {
+  overflow: auto;
+  max-width: 100% !important;
+}
+.blogListContainer-singlePage .blogList {
+  min-width: 65%;
+  max-width: 65% !important;
+  margin-right: 2em;
+}
+@media screen and (max-width: 768px) {
+  .blogListContainer-singlePage {
+    display: block;
+  }
+  .blogListContainer-singlePage .blogList {
+    min-width: 100%;
+    max-width: 100% !important;
+    margin-right: 0;
+  }
+  .blogListContainer-singlePage .blogExtras {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}
+
+.share-button {
+  display: flex;
+  align-items: center;
+}
+.share-button a {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.share-button a:last-child {
+  margin-right: 0;
+}
+.share-button a img {
+  width: 15px;
+  height: 15px;
+}
+
+/*# sourceMappingURL=default.css.map */

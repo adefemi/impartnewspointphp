@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500&display=swap");
+.singleBlog {
+  background-color: white;
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.singleBlog .top-content {
+  margin-bottom: 30px;
+}
+.singleBlog .top-content h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+.singleBlog .cover-main {
+  width: 100%;
+  background-color: #f2f2f2;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 700px) {
+  .singleBlog .cover-main {
+    height: 300px;
+  }
+}
+.singleBlog .share-button button {
+  outline: navajowhite;
+  margin-right: 10px;
+}
+.singleBlog .share-button button:last-child {
+  margin-right: 0;
+}
+.singleBlog .author {
+  font-size: 15px;
+  font-weight: 300;
+  color: black;
+  font-family: "Tajawal", sans-serif;
+}
+.singleBlog .author-con {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .singleBlog .author-con {
+    display: block;
+  }
+  .singleBlog .author-con .author {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .singleBlog .blogList {
+    width: calc(100vw - 40px);
+  }
+}
+.singleBlog .blog-content-main {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 400;
+  line-height: 25px;
+}
+.singleBlog .blog-content-main img {
+  max-width: 100% !important;
+}
+.singleBlog .blog-content-main pre {
+  overflow: auto;
+}
+.singleBlog .blog-content-main > * {
+  overflow: auto;
+  max-width: 100% !important;
+}
+.singleBlog .comment-comp {
+  margin-top: 30px;
+}
+.singleBlog .comment-comp h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.singleBlog .comment-comp form {
+  margin-top: 20px;
+}
+.singleBlog .comment-comp form input,
+.singleBlog .comment-comp form textarea {
+  display: block;
+  min-height: 40px;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+}
+.singleBlog .comment-comp form button {
+  width: 150px;
+  height: 40px;
+  font-weight: 600;
+  border: none;
+  background-color: #ed553b;
+  color: white;
+}
+
+.comentList {
+  margin-top: 30px;
+}
+.comentList h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.comentList .comment-card {
+  border: 1px solid #f2f2f2;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.comentList .comment-card p {
+  margin: 0;
+}
+.comentList .comment-card .footer {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: gray;
+}
+
+/*# sourceMappingURL=singleBlog.css.map */
