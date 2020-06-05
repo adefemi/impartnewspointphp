@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overlock:wght@700&display=swap");
 html,
 body {
   margin: 0;
@@ -35,10 +36,20 @@ body {
   font-size: 18px;
   text-decoration: none;
   color: black;
-  font-weight: bold;
+}
+.navbar .brand a .title {
+  margin-left: 20px;
 }
 .navbar .brand a span {
-  margin-left: 20px;
+  display: block;
+  font-weight: bolder;
+}
+.navbar .brand a small {
+  display: block;
+  font-size: 13px;
+  text-align: right;
+  font-family: "Overlock", cursive;
+  color: #666666;
 }
 .navbar .brand a img {
   width: 50px;
@@ -104,8 +115,9 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-.blogListContainer .blogCard,
-.blogListContainer .blogCardExtra {
+
+.blogCard,
+.blogCardExtra {
   width: 100%;
   height: 150px;
   margin-bottom: 50px;
@@ -115,8 +127,8 @@ footer {
   justify-content: space-between;
   background-color: white;
 }
-.blogListContainer .blogCard .blogImage,
-.blogListContainer .blogCardExtra .blogImage {
+.blogCard .blogImage,
+.blogCardExtra .blogImage {
   flex: 1;
   width: 25%;
   background-size: cover;
@@ -128,35 +140,35 @@ footer {
   margin-left: 20px;
 }
 @media screen and (max-width: 600px) {
-  .blogListContainer .blogCard,
-.blogListContainer .blogCardExtra {
+  .blogCard,
+.blogCardExtra {
     height: 100px;
   }
 }
-.blogListContainer .blogCard h4,
-.blogListContainer .blogCardExtra h4 {
+.blogCard h4,
+.blogCardExtra h4 {
   margin: 0;
   margin-bottom: 20px;
 }
-.blogListContainer .blogCard .blogContent,
-.blogListContainer .blogCardExtra .blogContent {
+.blogCard .blogContent,
+.blogCardExtra .blogContent {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.blogListContainer .blogCard .blogContent a,
-.blogListContainer .blogCardExtra .blogContent a {
+.blogCard .blogContent a,
+.blogCardExtra .blogContent a {
   text-decoration: none;
 }
-.blogListContainer .blogCard .blogContent .blogTitle,
-.blogListContainer .blogCardExtra .blogContent .blogTitle {
+.blogCard .blogContent .blogTitle,
+.blogCardExtra .blogContent .blogTitle {
   font-size: 20px;
   font-weight: bold;
   color: black;
   margin-bottom: 5px;
 }
-.blogListContainer .blogCard .blogContent p,
-.blogListContainer .blogCardExtra .blogContent p {
+.blogCard .blogContent p,
+.blogCardExtra .blogContent p {
   margin: 0;
   line-height: 25px;
   color: #4d4d4d;
@@ -164,39 +176,63 @@ footer {
   font-family: "Tajawal", sans-serif;
   font-size: 15px;
 }
-.blogListContainer .blogCard .blogContent p img,
-.blogListContainer .blogCardExtra .blogContent p img {
+.blogCard .blogContent p img,
+.blogCardExtra .blogContent p img {
   width: 100%;
 }
-.blogListContainer .blogCard .blogContent .footer,
-.blogListContainer .blogCardExtra .blogContent .footer {
+.blogCard .blogContent .footer,
+.blogCardExtra .blogContent .footer {
   font-size: 12px;
   color: #4d4d4d;
   font-weight: 500;
 }
 @media screen and (max-width: 600px) {
-  .blogListContainer .blogCard .blogContent .blogTitle,
-.blogListContainer .blogCardExtra .blogContent .blogTitle {
+  .blogCard .blogContent .blogTitle,
+.blogCardExtra .blogContent .blogTitle {
     font-size: 17px;
   }
-  .blogListContainer .blogCard .blogContent p,
-.blogListContainer .blogCardExtra .blogContent p {
+  .blogCard .blogContent p,
+.blogCardExtra .blogContent p {
     font-size: 13px;
   }
-  .blogListContainer .blogCard .blogContent .footer,
-.blogListContainer .blogCardExtra .blogContent .footer {
+  .blogCard .blogContent .footer,
+.blogCardExtra .blogContent .footer {
     font-size: 11px;
   }
 }
-.blogListContainer .blogCardExtra {
+
+.blogCardExtra {
   height: unset;
   flex-direction: row;
 }
-.blogListContainer .blogCardExtra .blogContent .blogTitle {
+.blogCardExtra .blogContent .blogTitle {
   font-size: 15px;
 }
-.blogListContainer .blogCardExtra .blogContent .footer {
+.blogCardExtra .blogContent .footer {
   margin-top: 10px;
+}
+
+.menu {
+  padding: 0;
+  max-width: 1000px;
+  margin: 30px auto 0;
+}
+.menu a {
+  padding: 15px 25px 10px;
+  display: inline-block;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  color: white;
+  background-color: #173f5f;
+  text-decoration: none;
+}
+.menu a:hover {
+  background-color: #215a88;
+}
+@media screen and (max-width: 600px) {
+  .menu a {
+    font-size: 13px;
+  }
 }
 
 .blog-container {
@@ -284,51 +320,6 @@ footer {
   font-family: "Tajawal", sans-serif;
   font-weight: 400;
   line-height: 25px;
-}
-.blogListContainer-singlePage .blogExtras {
-  margin-left: 2em;
-  margin-top: 20px;
-}
-.blogListContainer-singlePage .blogExtras .blogContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.blogListContainer-singlePage .blogExtras .blogContent a {
-  text-decoration: none;
-}
-.blogListContainer-singlePage .blogExtras .blogContent .blogTitle {
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 5px;
-}
-.blogListContainer-singlePage .blogExtras .blogContent p {
-  margin: 0;
-  line-height: 25px;
-  color: #4d4d4d;
-  width: 100%;
-  font-family: "Tajawal", sans-serif;
-  font-size: 15px;
-}
-.blogListContainer-singlePage .blogExtras .blogContent p img {
-  width: 100%;
-}
-.blogListContainer-singlePage .blogExtras .blogContent .footer {
-  font-size: 12px;
-  color: #4d4d4d;
-  font-weight: 500;
-}
-@media screen and (max-width: 600px) {
-  .blogListContainer-singlePage .blogExtras .blogContent .blogTitle {
-    font-size: 17px;
-  }
-  .blogListContainer-singlePage .blogExtras .blogContent p {
-    font-size: 13px;
-  }
-  .blogListContainer-singlePage .blogExtras .blogContent .footer {
-    font-size: 11px;
-  }
 }
 .blogListContainer-singlePage img {
   max-width: 100% !important;

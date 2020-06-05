@@ -14,6 +14,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/assets/styles/singleBlog.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/images/imaprt.png"/>
     <meta property="og:title" content="<?php echo $blog['title'] ?>">
 
     <meta property="og:url" content="<?php echo $actual_link ?>">

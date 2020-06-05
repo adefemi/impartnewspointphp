@@ -45,7 +45,12 @@
 
     let canGoNext = false;
     const blogList = $('#blog-list');
-    getBlogs(BLOG_URL);
+    let urlMain = BLOG_URL;
+    let search = Qs.parse(window.location.search.replace("?", ""));
+    if(search.search){
+        urlMain = BLOG_URL + `?tags__title__iexact=${search.search}`
+    }
+    getBlogs(urlMain);
 
 
     $("#search").on("change paste keyup", function () {

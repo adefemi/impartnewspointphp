@@ -12,6 +12,9 @@ switch ($request) {
         if(preg_match_all('/\/[a-zA-Z0-9]+/', $request)){
             require __DIR__ . '/pages/singleBlog.php';
         }
+        if(preg_match_all('/\/?[a-zA-Z0-9]+/', $request)){
+            require __DIR__ . '/pages/home.php';
+        }
         else{
             require __DIR__ . '/pages/404.php';
             break;

@@ -7,6 +7,7 @@
     const baseUrl = "https://api.impartnewspoint.com/";
     const BLOG_URL = baseUrl + "blogs/";
     const TOP_BLOG_URL = baseUrl + "top-blogs";
+    const BLOG_TAGS_URL = baseUrl + "blog-tags";
     const SIMILAR_BLOG_URL = baseUrl + "similar-blogs/";
     const BLOG_COMMENT_URL = baseUrl + "blog-comments/";
 
