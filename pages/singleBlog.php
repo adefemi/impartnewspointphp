@@ -21,7 +21,7 @@
 
         gtag('config', 'UA-168727817-1');
     </script>
-
+    <script data-ad-client="ca-pub-4723264594336681" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/assets/styles/singleBlog.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/assets/images/imaprt.png"/>
