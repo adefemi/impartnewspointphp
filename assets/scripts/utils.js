@@ -67,7 +67,8 @@ function getBlogComments(url, commentHolder, canGoNext, nextCon=false) {
     const commentList = $("#commentHolder");
     axios.get(url).then(
         res => {
-            canGoNext = res.data.next;
+            canGoNext = res.data.next && res.data.next.split("?");
+            canGoNext = canGoNext && canGoNext[canGoNext.length - 1];
             const comments = res.data.results;
             if(comments.length < 1 && !nextCon){
                 commentList.html(`<h3>No comment found...</h3>`)
@@ -76,11 +77,20 @@ function getBlogComments(url, commentHolder, canGoNext, nextCon=false) {
                 if(!nextCon){
                     commentList.html("");
                 }
+                else {
+                    $('#loadMoreButton').remove()
+                }
                 for (let i = 0; i<comments.length; i++){
                     commentList.append(
                         getCommentCard(comments[i]),
                     )
                 }
+            }
+
+            if(canGoNext){
+                commentList.append(
+                    `<button id="loadMoreButton" onclick="commentLoadMore(this)">Load more</button>`
+                )
             }
         },
         err => {

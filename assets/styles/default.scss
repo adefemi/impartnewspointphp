@@ -13,6 +13,13 @@ body {
   text-transform: capitalize;
 }
 
+button{
+  background-color: $primary_color;
+  padding: 10px 20px;
+  border: 0;
+  color: white;
+}
+
 .navbar {
   height: 60px;
   display: flex;
@@ -22,11 +29,6 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   margin-top: 20px;
-  @media screen and (max-width: 600px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   .brand {
     a{
       display: flex;
@@ -58,7 +60,40 @@ body {
 
   .navRight {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    img{
+      width: 20px;
+      height: 20px;
+      border: 1px solid black;
+      padding: 5px 10px;
+    }
+
+    .menu-link{
+      position: absolute;
+      display: none;
+      top: 40px;
+      right: 0;
+      z-index: 1;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 100px;
+      .overlay{
+        position: fixed;
+        background-color: transparent;
+        top: 0; left: 0; right: 0; bottom: 0;
+      }
+
+      .navLinks{
+        position: relative;
+        padding: 10px 20px;
+        a{
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+    }
 
     .navLinks {
       margin: 0 20px;
@@ -80,6 +115,41 @@ body {
         }
       }
     }
+
+    .top, .bottom{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .top{
+      margin-bottom: 10px;
+      .navLinks{
+        a{
+          font-size: 10px;
+          font-weight: bold;
+        }
+
+      }
+    }
+    .bottom{
+      a{
+        &:hover{
+          color: $primary_color;
+        }
+      }
+    }
+  }
+}
+
+.centerContent{
+  margin: 30px auto;
+  max-width: 1000px;
+
+  p{
+    font-family: $secondary_font;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 

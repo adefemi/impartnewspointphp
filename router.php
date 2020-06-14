@@ -8,6 +8,12 @@ switch ($request) {
     case '/' :
         require __DIR__ . '/pages/home.php';
         break;
+    case '/about' :
+        require __DIR__ . '/pages/about.php';
+        break;
+    case '/contact' :
+        require __DIR__ . '/pages/contact.php';
+        break;
     default:
         if(preg_match_all('/\/[a-zA-Z0-9]+/', $request)){
             require __DIR__ . '/pages/singleBlog.php';

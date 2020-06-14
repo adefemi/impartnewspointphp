@@ -21,7 +21,7 @@
         res => {
             const blogs = res.data.results;
             if(blogs.length < 1){
-
+                topBlogs.html("<h3><i>No news content available</i></h3>")
             }
             else {
                 topBlogs.html("");
@@ -34,7 +34,7 @@
 
         },
         err => {
-
+            topBlogs.html("<h3><i>No news content available</i></h3>")
         }
     )
 

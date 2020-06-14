@@ -10,14 +10,11 @@
 
 <script>
     getBlogComments(BLOG_COMMENT_URL + "?blog_id=<?=$blog["id"];?>", "commentHolder", canGoNext);
-    function commentLoadMore() {
+    function commentLoadMore(e) {
+        e.innerText = "Loading...";
+        e.disabled = true;
         if(canGoNext){
-            getBlogComments(canGoNext, "commentHolder", canGoNext, true);
+            getBlogComments(BLOG_COMMENT_URL + `?${canGoNext}`, "commentHolder", canGoNext, true);
         }
     }
-    $(window).scroll(function() {
-        if($(window).scrollTop() + window.innerHeight > $(document).height() - 200 ) {
-            commentLoadMore();
-        }
-    });
 </script>

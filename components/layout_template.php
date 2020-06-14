@@ -9,17 +9,43 @@ $request = $_SERVER['REQUEST_URI'];
                 </div></a></div>
 
         <div class="navRight desktop">
-            <div class="navLinks">
-                <a href="http://www.facebook.com">Facebook</a>
-            </div>
+            <div class="top">
+                <div class="navLinks">
+                    <a href="http://www.facebook.com">Facebook</a>
+                </div>
 
-            <div class="navLinks">
-                <a href="#">Twitter</a>
+                <div class="navLinks">
+                    <a href="#">Twitter</a>
+                </div>
+                <div class="navLinks">
+                    <a href="#">LinkedIn</a>
+                </div>
             </div>
-            <div class="navLinks">
-                <a href="#">LinkedIn</a>
+            <div class="bottom">
+                <div class="navLinks">
+                    <a href="/about">About</a>
+                </div>
+
+                <div class="navLinks">
+                    <a href="/contact">Contact</a>
+                </div>
             </div>
         </div>
+        <div class="navRight mobile">
+            <img src="/assets/images/bars.png" alt="" onclick="toggleMenu()">
+
+            <div class="menu-link" id="menuLink">
+                <div class="overlay" onclick="toggleMenu()"></div>
+                <div class="navLinks">
+                    <a href="/about">About</a>
+                </div>
+
+                <div class="navLinks">
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="menu"></div>
     <div class="children-con">
@@ -28,6 +54,12 @@ $request = $_SERVER['REQUEST_URI'];
         switch ($request) {
             case '/' :
                 require_once "pages/HomeComponents/homeContent.php";
+                break;
+            case '/about' :
+                require_once "pages/AboutComponent/aboutContent.php";
+                break;
+            case '/contact' :
+                require_once "pages/ContactComponent/contactContent.php";
                 break;
             default:
                 if(preg_match_all('/\/[a-zA-Z0-9]+/', $request)){
@@ -62,4 +94,13 @@ $request = $_SERVER['REQUEST_URI'];
             menu.innerHTML = menuItems;
         }
     )
+    function toggleMenu() {
+        const menuLink = document.getElementById("menuLink")
+        if(menuLink.style.display === "block"){
+            menuLink.style.display = "none"
+        }
+        else {
+            menuLink.style.display = "block"
+        }
+    }
 </script>

@@ -65,14 +65,18 @@
     function getBlogs(url, nextCon=false) {
         axios.get(url).then(
             res => {
-                canGoNext = res.data.next;
+                canGoNext = res.data.next && res.data.next.split("?");
+                canGoNext = canGoNext && canGoNext[canGoNext.length - 1];
                 const blogs = res.data.results;
                 if(blogs.length < 1 && !nextCon){
-
+                    blogList.html("<h3><i>No news content available</i></h3>")
                 }
                 else {
                     if(!nextCon){
-                        blogList.html("");
+                        blogList.html("")
+                    }
+                    else {
+                        $('#loadMoreButton').remove()
                     }
                     for (let i = 0; i<blogs.length; i++){
                         blogList.append(
@@ -81,22 +85,24 @@
                     }
                 }
 
+                if(canGoNext){
+                    blogList.append(
+                        `<button id="loadMoreButton" onclick="homeLoadMore(this)">Load more</button>`
+                    )
+                }
+
             },
             err => {
-
+                blogList.html("<h3><i>No news content available</i></h3>")
             }
         )
     }
     
-    function homeLoadMore() {
+    function homeLoadMore(e) {
+        e.innerText = "Loading...";
+        e.disabled = true;
         if(canGoNext){
-            getBlogs(canGoNext, true)
+            getBlogs(BLOG_URL+`?${canGoNext}`, true)
         }
     }
-
-    $(window).scroll(function() {
-        if($(window).scrollTop() + window.innerHeight > $(document).height() - 200 ) {
-            homeLoadMore();
-        }
-    });
 </script>
