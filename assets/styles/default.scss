@@ -13,7 +13,7 @@ body {
   text-transform: capitalize;
 }
 
-button{
+button {
   background-color: $primary_color;
   padding: 10px 20px;
   border: 0;
@@ -30,32 +30,46 @@ button{
   margin: 0 auto;
   margin-top: 20px;
   .brand {
-    a{
+    a {
       display: flex;
       align-items: center;
       font-size: 18px;
       text-decoration: none;
       color: black;
-      .title{
+      .title {
         margin-left: 20px;
       }
-      span{
+      span {
         display: block;
         font-weight: bolder;
+        font-size: 30px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 25px;
+        }
+
+        @media screen and (max-width: 500px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 400px) {
+          font-size: 16;
+        }
       }
-      small{
+      small {
         display: block;
         font-size: 13px;
         text-align: right;
         font-family: $tt_font;
         color: darken(white, 60%);
       }
-      img{
-        width: 50px;
+      img {
+        width: 100px;
+
+        @media screen and (max-width: 400px) {
+          width: 60px;
+        }
       }
     }
-
-
   }
 
   .navRight {
@@ -63,32 +77,35 @@ button{
     flex-direction: column;
     position: relative;
 
-    img{
+    img {
       width: 20px;
       height: 20px;
       border: 1px solid black;
       padding: 5px 10px;
     }
 
-    .menu-link{
+    .menu-link {
       position: absolute;
       display: none;
       top: 40px;
       right: 0;
       z-index: 1;
       background-color: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       width: 100px;
-      .overlay{
+      .overlay {
         position: fixed;
         background-color: transparent;
-        top: 0; left: 0; right: 0; bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
       }
 
-      .navLinks{
+      .navLinks {
         position: relative;
         padding: 10px 20px;
-        a{
+        a {
           font-size: 13px;
           font-weight: 600;
         }
@@ -98,7 +115,7 @@ button{
     .navLinks {
       margin: 0 20px;
 
-      &:last-child{
+      &:last-child {
         margin-right: 0;
       }
       a {
@@ -110,31 +127,31 @@ button{
 
       @media screen and (max-width: 600px) {
         margin-left: 0;
-        a{
+        a {
           font-size: 12px;
         }
       }
     }
 
-    .top, .bottom{
+    .top,
+    .bottom {
       display: flex;
       align-items: center;
       justify-content: flex-end;
     }
 
-    .top{
+    .top {
       margin-bottom: 10px;
-      .navLinks{
-        a{
+      .navLinks {
+        a {
           font-size: 10px;
           font-weight: bold;
         }
-
       }
     }
-    .bottom{
-      a{
-        &:hover{
+    .bottom {
+      a {
+        &:hover {
           color: $primary_color;
         }
       }
@@ -142,22 +159,22 @@ button{
   }
 }
 
-.centerContent{
+.centerContent {
   margin: 30px auto;
   max-width: 1000px;
 
-  p{
+  p {
     font-family: $secondary_font;
     font-size: 20px;
     line-height: 30px;
   }
 }
 
-.children-con{
+.children-con {
   min-height: 90vh;
 }
 
-footer{
+footer {
   height: 100px;
   background-color: #e9f1f8;
   display: flex;
@@ -167,8 +184,8 @@ footer{
   font-weight: 600;
 }
 
-.blogExtras-main{
-  h4{
+.blogExtras-main {
+  h4 {
     margin: 0;
     font-size: 20px;
     padding-bottom: 20px;
@@ -186,13 +203,9 @@ footer{
   grid-gap: 4em;
   box-sizing: border-box;
 
-
   @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
   }
-
-
-
 }
 
 .blogCard,
@@ -228,7 +241,7 @@ footer{
   }
 
   .blogContent {
-    a{
+    a {
       text-decoration: none;
     }
     display: flex;
@@ -241,7 +254,7 @@ footer{
       margin-bottom: 5px;
     }
 
-    p{
+    p {
       margin: 0;
       line-height: 25px;
       color: darken(white, 70%);
@@ -249,7 +262,7 @@ footer{
       font-family: $secondary_font;
       font-size: 15px;
 
-      img{
+      img {
         width: 100%;
       }
     }
@@ -261,41 +274,39 @@ footer{
     }
 
     @media screen and (max-width: 600px) {
-      .blogTitle{
+      .blogTitle {
         font-size: 17px;
       }
-      p{
+      p {
         font-size: 13px;
       }
-      .footer{
+      .footer {
         font-size: 11px;
       }
     }
   }
 }
 
-
-.blogCardExtra{
+.blogCardExtra {
   height: unset;
   flex-direction: row;
-  .blogContent{
-    .blogTitle{
+  .blogContent {
+    .blogTitle {
       font-size: 15px;
     }
 
-    .footer{
+    .footer {
       margin-top: 10px;
     }
   }
-
 }
 
-.menu{
+.menu {
   padding: 0;
   max-width: 1000px;
   margin: 30px auto 0;
 
-  a{
+  a {
     padding: 15px 25px 10px;
     display: inline-block;
     font-family: $secondary_font;
@@ -304,8 +315,7 @@ footer{
     background-color: $primary_color;
     text-decoration: none;
 
-
-    &:hover{
+    &:hover {
       background-color: lighten($primary_color, 10%);
     }
 
@@ -315,7 +325,7 @@ footer{
   }
 }
 
-.blog-container{
+.blog-container {
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -326,7 +336,7 @@ footer{
   margin-bottom: 30px;
 
   @media screen and (max-width: 600px) {
-   display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -338,13 +348,10 @@ footer{
     border-radius: 2px;
     border: 1px solid darken(white, 5%);
 
-
-
     li {
       list-style: none;
 
-
-      a{
+      a {
         padding: 10px 25px;
         border-right: 1px solid darken(white, 5%);
         cursor: pointer;
@@ -362,28 +369,27 @@ footer{
         }
       }
 
-
       &:last-child {
-        a{
+        a {
           border-right: none;
         }
       }
 
       &:hover {
-        a{
+        a {
           background-color: darken(white, 5%);
         }
       }
 
       &.disabled {
-        a{
+        a {
           cursor: not-allowed;
-          color: darken(white, 50%)
+          color: darken(white, 50%);
         }
       }
 
       &.selected {
-        a{
+        a {
           color: white;
           background-color: $primary_color;
         }
@@ -392,14 +398,14 @@ footer{
   }
 }
 
-.mobile{
+.mobile {
   display: none !important;
 }
 @media screen and (max-width: 600px) {
-  .desktop{
+  .desktop {
     display: none !important;
   }
-  .mobile{
+  .mobile {
     display: block !important;
   }
 }
@@ -408,7 +414,7 @@ footer{
   background-color: darken(white, 5%);
 }
 
-.blogListContainer-singlePage{
+.blogListContainer-singlePage {
   width: 100%;
   max-width: 1000px;
   display: flex;
@@ -416,19 +422,18 @@ footer{
   font-family: $secondary_font;
   font-weight: 400;
   line-height: 25px;
-  img{
+  img {
     max-width: 100% !important;
     max-height: 400px;
-
   }
-  pre{
+  pre {
     overflow: auto;
   }
-  &>*{
+  & > * {
     overflow: auto;
     max-width: 100% !important;
   }
-  .blogList{
+  .blogList {
     min-width: 65%;
     max-width: 65% !important;
     margin-right: 2em;
@@ -436,22 +441,22 @@ footer{
 
   @media screen and (max-width: 768px) {
     display: block;
-    .blogList{
+    .blogList {
       min-width: 100%;
       max-width: 100% !important;
       margin-right: 0;
     }
-    .blogExtras{
+    .blogExtras {
       margin-left: 0;
-      margin-top:40px;
+      margin-top: 40px;
     }
   }
 }
 
-.share-button{
+.share-button {
   display: flex;
   align-items: center;
-  a{
+  a {
     width: 30px;
     height: 30px;
     display: flex;
@@ -461,10 +466,10 @@ footer{
     border-radius: 50%;
     margin-right: 10px;
 
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
-    img{
+    img {
       width: 15px;
       height: 15px;
     }
