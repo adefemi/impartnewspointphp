@@ -82,7 +82,7 @@ $request = $_SERVER['REQUEST_URI'];
 
 </div>
 <footer>
-    Impartnewspoint 2020 &copy; All Rights Reserved
+    Impartnewspoint <?php echo date("Y"); ?> &copy; All Rights Reserved
 </footer>
 <script>
 axios.get(BLOG_TAGS_URL).then(
