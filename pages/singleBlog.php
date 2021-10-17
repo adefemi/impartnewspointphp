@@ -13,15 +13,6 @@
 >
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168727817-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-168727817-1');
-    </script>
-    <script data-ad-client="ca-pub-4723264594336681" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/assets/styles/singleBlog.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="/assets/images/imaprt.png"/>
