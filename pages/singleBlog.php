@@ -13,7 +13,7 @@
 >
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1927272486525742"
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4723264594336681"
      crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/assets/styles/singleBlog.css" rel="stylesheet">
